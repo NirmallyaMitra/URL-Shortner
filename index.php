@@ -19,6 +19,7 @@
 	<title>URL-Shortner</title>
 </head>
 <body>
+	
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -36,6 +37,5 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-  </body>
 </body>
 </html>
