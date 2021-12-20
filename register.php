@@ -25,8 +25,52 @@
 	<title>URL-Shortner</title>
 </head>
 <body>
+	<!-- main box -->
+	<section id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="img-body col-lg-6">
+            		<!-- image body -->
+            		<img src="images/man.jpg" alt="" class="man" />
+          		</div>
+          		<div class="img-body col-lg-1"></div>
 
-	
+          		<!-- login box -->
+          		<div class="col-lg-4">
+            		<div class="login-div">
+              			<h1 style="font-weight: 600; line-height: 1.4em">Get Started.</h1>
+              			<div class="login">
+               				Alread have an account? <a href="index.html">Login</a>
+              			</div>
+              			<div class="fields">
+                 			<form method="post" action="User.php">
+					  			<div class="name">
+									<input type="name" class="user-input" placeholder="Name" name="name"/>
+									<i class="fad fa-user"></i>
+					  			</div>
+					  
+					  			<div class="phone">
+									<input type="phone" class="user-input" placeholder="Mobile Number" name = "phone"/>
+									<i class="far fa-phone-alt"></i>
+					  			</div>
+					 
+								<div class="mail">    
+					  				<input type="mail" class="user-input" placeholder="Email" name="mail"/>
+					  				<i class="fad fa-envelope"></i>
+								</div>
+
+								<div class="password">
+					  				<input type="" class="pass-input" placeholder="Password" name="pwd"/>
+					  				<i class="fad fa-lock"></i>
+								</div>
+									<input type="submit" value="Sign In" class="BUTTON">
+							</form>
+            			</div>
+          			</div>
+        		</div>
+      		</div>
+      	</div>
+    </section>
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
