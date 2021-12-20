@@ -37,7 +37,7 @@
 
               			<!-- uses solid style -->
               			<div class="register">
-                			Don't have an account? <a href="register.html">register now</a>
+                			Don't have an account? <a href="register.php">register now</a>
               			</div>
               			<div class="fields">
                 			<div class="mail">
