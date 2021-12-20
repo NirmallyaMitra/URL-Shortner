@@ -19,7 +19,44 @@
 	<title>URL-Shortner</title>
 </head>
 <body>
-	
+	<!-- main box -->
+    <section id="main-content">
+    	<div class="container">
+    		<div class="row">
+          		<div class="img-body col-lg-6">
+            	<!-- image body -->
+            		<img src="images/man.jpg" alt="" class="man" />
+          		</div>
+          		<div class="img-body col-lg-1"></div>
+
+          		<!-- login box -->
+          		<div class="col-lg-4">
+            		<div class="login-div">
+              			<h1 style="font-weight: 600; line-height: 1.4em">LOGIN</h1>
+
+              			<!-- uses solid style -->
+              			<div class="register">
+                			Don't have an account? <a href="register.html">register now</a>
+              			</div>
+              			<div class="fields">
+              				<form method="POST" action="PHP/login.php">
+	                			<div class="mail">
+	                  				<input type="mail" class="user-input" placeholder="Email" />
+	                  				<i class="fad fa-envelope"></i>
+	                			</div>
+
+	                			<div class="password">
+	                  				<input type="" class="pass-input" placeholder="Password" />
+	                  				<i class="fad fa-lock"></i>
+	                			</div>
+	                			<input type="submit" value="Sign In"
+                			</form>
+              			</div>
+            		</div>
+          		</div>
+        	</div>
+    	</div>
+    </section>
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
