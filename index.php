@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS Stylesheet-->
@@ -25,7 +26,7 @@
     		<div class="row">
           		<div class="img-body col-lg-6">
             	<!-- image body -->
-            		<img src="images/man.jpg" alt="" class="man" />
+            		<img src="images/man.jpg" alt="man" class="man" />
           		</div>
           		<div class="img-body col-lg-1"></div>
 
@@ -39,23 +40,21 @@
                 			Don't have an account? <a href="register.html">register now</a>
               			</div>
               			<div class="fields">
-              				<form method="POST" action="PHP/login.php">
-	                			<div class="mail">
-	                  				<input type="mail" class="user-input" placeholder="Email" />
-	                  				<i class="fad fa-envelope"></i>
-	                			</div>
+                			<div class="mail">
+                  				<input type="mail" class="user-input" placeholder="Email" />
+                  				<i class="fad fa-envelope"></i>
+                			</div>
 
-	                			<div class="password">
-	                  				<input type="" class="pass-input" placeholder="Password" />
-	                  				<i class="fad fa-lock"></i>
-	                			</div>
-	                			<input type="submit" value="Sign In"
-                			</form>
+                			<div class="password">
+                  				<input type="" class="pass-input" placeholder="Password" />
+                  				<i class="fad fa-lock"></i>
+                			</div>
+                			<input type="submit" value="Sign In" class="BUTTON">
               			</div>
             		</div>
           		</div>
-        	</div>
-    	</div>
+	        </div>
+        </div>
     </section>
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
