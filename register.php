@@ -40,7 +40,7 @@
             		<div class="login-div">
               			<h1 style="font-weight: 600; line-height: 1.4em">Get Started.</h1>
               			<div class="login">
-               				Alread have an account? <a href="index.html">Login</a>
+               				Alread have an account? <a href="index.php">Login</a>
               			</div>
               			<div class="fields">
                  			<form method="post" action="User.php">
