@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +24,33 @@
 	<title>URL-Shortner</title>
 </head>
 <body>
+  <?php
+    include 'Connection.php';
+    if(isset($_POST['submit'])){
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+
+      $email_search = "select * from user where email='$email'";
+      $query = mysqli_query($conn, $email_search);
+
+      $email_count = mysqli_num_rows($query);
+
+      if($email_count){
+          $email_pass = mysqli_fetch_assoc($query);
+          $p = $email_pass['pwd'];
+          if($p){
+            echo 'Login Successfull';
+          }
+          else{
+            echo 'Password Invalid';
+          }
+      }
+      else{
+        echo 'Email Invalid';
+      }
+
+    }
+  ?>
 	<!-- main box -->
     <section id="main-content">
     	<div class="container">
@@ -40,16 +71,18 @@
                 			Don't have an account? <a href="register.php">register now</a>
               			</div>
               			<div class="fields">
+                      <form method="post" action='<?php echo htmlentities($_SERVER['PHP_SELF']);?>'>
                 			<div class="mail">
-                  				<input type="mail" class="user-input" placeholder="Email" />
+                  				<input type="mail" name="email" class="user-input" placeholder="Email" />
                   				<i class="fad fa-envelope"></i>
                 			</div>
 
                 			<div class="password">
-                  				<input type="" class="pass-input" placeholder="Password" />
+                  				<input type="" name="password" class="pass-input" placeholder="Password" />
                   				<i class="fad fa-lock"></i>
                 			</div>
-                			<input type="submit" value="Sign In" class="BUTTON">
+                			<input type="submit" name="submit" value="Sign In" class="BUTTON">
+                    </form>
               			</div>
             		</div>
           		</div>
