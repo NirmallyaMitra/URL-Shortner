@@ -1,5 +1,7 @@
 <?php 
-  include "Connection.php";
+  session_start();
+  if(isset($_SESSION['username'])){
+    include "Connection.php";
   $new_url = "";
   if(isset($_GET)){
     foreach($_GET as $key=>$val){
@@ -15,6 +17,7 @@
           }
       }
   }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -22,9 +25,9 @@
 <head>
   <meta charset="UTF-8">
   <title>URL-Shortener</title>
-  <link rel="stylesheet" href="CSS/urlpage.css" />
-  <!-- Iconsout Link for Icons -->
+  <link rel="stylesheet" href="../CSS/urlpage.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
 </head>
 <body>
   <div class="wrapper">
@@ -49,7 +52,7 @@
               }
             ?>
             <span>Total Links: <span><?php echo end($res) ?></span> & Total Clicks: <span><?php echo $total ?></span></span>
-            <a href="php/delete.php?delete=all">Clear All</a>
+            <a href="delete.php?delete=all">Clear All</a>
         </div>
         <div class="urls-area">
           <div class="title">
@@ -63,12 +66,12 @@
               ?>
                 <div class="data">
                 <li>
-                  <a href="<?php echo $row['shorten_url'] ?>" target="_blank">
+                  <a href="<?php echo "localhost/url/".$row['shorten_url'] ?>">
                   <?php
-                    if(strlen($row['shorten_url']) > 50){
-                      echo substr($row['shorten_url'], 0, 50) . '...';
+                    if("localhost/url/".strlen($row['shorten_url']) > 50){
+                      echo "localhost/url/".substr($row['shorten_url'], 0, 50) . '...';
                     }else{
-                      echo $row['shorten_url'];
+                      echo "localhost/url/".$row['shorten_url'];
                     }
                   ?>
                   </a>
@@ -84,7 +87,7 @@
                 </li> 
               </li>
                 <li><?php echo $row['clicks'] ?></li>
-                <li><a href="php/delete.php?id=<?php echo $row['shorten_url'] ?>">Delete</a></li>
+                <li><a href="delete.php?id=<?php echo $row['shorten_url'] ?>">Delete</a></li>
               </div>
               <?php
             }
@@ -105,6 +108,8 @@
     <button>Save</button>
   </form>
   </div>
+
+  <a href="logout.php">LogOut</a>
 
   <script src="urljs.js"></script>
 

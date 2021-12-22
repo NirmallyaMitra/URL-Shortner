@@ -1,5 +1,5 @@
 <?php 
-  include "Connection.php";
+  include "PHP/Connection.php";
 
   $Name = $_POST['name'];
   $Mno = $_POST['phone'];

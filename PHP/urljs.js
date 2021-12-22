@@ -23,9 +23,8 @@ shortenBtn.onclick = ()=>{
                 blurEffect.style.display = "block";
                 popupBox.classList.add("show");
 
-                //paste your url here. Like this: codingnepalweb.com/
-                let $domain = "localhost/url"; 
-                shortenURL.value = $domain + data;
+                let domain = "localhost/url/"; 
+                shortenURL.value = domain + data;
                 copyIcon.onclick = ()=>{
                     shortenURL.select();
                     document.execCommand("copy");

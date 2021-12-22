@@ -25,7 +25,7 @@ session_start();
 </head>
 <body>
   <?php
-    include 'Connection.php';
+    include 'PHP/Connection.php';
     if(isset($_POST['submit'])){
       $email = $_POST['email'];
       $password = $_POST['password'];
@@ -37,16 +37,17 @@ session_start();
 
       if($email_count){
           $email_pass = mysqli_fetch_assoc($query);
+          $_SESSION['username'] = $email_pass['Name'];
           $p = $email_pass['pwd'];
           if($p){
-            echo 'Login Successfull';
+            header("location: PHP/url.php");
           }
           else{
-            echo 'Password Invalid';
+            alert("Password Invalid.");
           }
       }
       else{
-        echo 'Email Invalid';
+        alert("Email Invalid");
       }
 
     }
