@@ -1,6 +1,9 @@
 <?php 
   session_start();
-  if(isset($_SESSION['username'])){
+  if(!isset($_SESSION['username'])){
+	  header("location: ../index.php");
+  }
+  else{
     include "Connection.php";
   $new_url = "";
   if(isset($_GET)){
@@ -109,7 +112,7 @@
   </form>
   </div>
 
-  <a href="logout.php">LogOut</a>
+  <a href="../logout.php">LogOut</a>
 
   <script src="urljs.js"></script>
 
