@@ -1,7 +1,7 @@
 <?php
   $servername = "localhost";
   $username = "root";
-  $password = "Joy@123";
+  $password = "";
   $dbname = "UrlShortner";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);

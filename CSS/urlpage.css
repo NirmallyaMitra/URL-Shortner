@@ -8,11 +8,21 @@
 }
 
 body{
+  background: #20B2AA;
+}
+
+.navi{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.outer{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #20B2AA;
+  min-height: 80vh;
   padding: 0 10px;
 }
 

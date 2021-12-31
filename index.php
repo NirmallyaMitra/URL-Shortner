@@ -43,11 +43,11 @@ session_start();
             header("location: PHP/url.php");
           }
           else{
-            alert("Password Invalid.");
+            echo '<script>alert("Password Invalid.")</script>';
           }
       }
       else{
-        alert("Email Invalid");
+        echo '<script>alert("Email Invalid")</script>';
       }
 
     }
@@ -74,13 +74,13 @@ session_start();
               			<div class="fields">
                       <form method="post" action='<?php echo htmlentities($_SERVER['PHP_SELF']);?>'>
                 			<div class="mail">
-                  				<input type="mail" name="email" class="user-input" placeholder="Email" />
+                  				<input type="mail" name="email" class="user-input" placeholder="Email" autocomplete="off"/>
                   				<i class="fad fa-envelope"></i>
                 			</div>
 
                 			<div class="password">
-                  				<input type="" name="password" class="pass-input" placeholder="Password" />
-                  				<i class="fad fa-lock"></i>
+                  				<input id="password" type="password" name="password" class="pass-input" placeholder="Password" autocomplete="off"/>
+                  				<i class="fas fa-eye" id="togglePassword"></i>
                 			</div>
                 			<input type="submit" name="submit" value="Sign In" class="BUTTON">
                     </form>
@@ -107,5 +107,14 @@ session_start();
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
+      togglePassword.addEventListener('click', function (e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+      });
+    </script>
 </body>
 </html>
