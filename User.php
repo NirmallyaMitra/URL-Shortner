@@ -6,7 +6,7 @@
   $email = $_POST['mail'];
   $psw = $_POST['pwd'];
 
-  $sql = "INSERT INTO User(Name, Mno, email, pwd) VALUES ('$Name', $Mno, '$email', '$psw')";
+  $sql = "INSERT INTO user(Name, Mno, email, pwd) VALUES ('$Name', $Mno, '$email', '$psw')";
 
   if (mysqli_query($conn, $sql)) {
     header("location:index.php");
