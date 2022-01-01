@@ -59,12 +59,12 @@ INSTALL LAMP STACK ON AWS - UBUNTU 18
 	sudo apt install apache2
 
 	sudo ufw app list
-
 	sudo ufw app info "Apache Full"
-
 	sudo ufw allow in "Apache Full"
 
-   APACHE INSTALLED SUCCESFULLY TILL HERE, YOU CAN CHECK BY ENTERING YOUR PUBLIC IP OR PUBLICK DNS ADDRESS - http://your_server_ip
+   APACHE INSTALLED SUCCESFULLY TILL HERE, YOU CAN CHECK BY ENTERING YOUR PUBLIC IP OR PUBLICK DNS ADDRESS
+   	
+	http://your_server_ip
 
 ==================================================
 
@@ -111,10 +111,10 @@ INSTALL LAMP STACK ON AWS - UBUNTU 18
 	Check PHP Version by entering 
 	php -v
 
-	Install the commonly required php modules by using the below commands - do remeber replace the php version number with your by checking the php -v command 
-	For Example if the php -v command shows 7.4 version installed then you have to replace the 7.2 with 7.4 in the below command
+Install the commonly required php modules by using the below commands - do remeber replace the php version number with your by checking the php -v command 
+For Example if the php -v command shows 7.4 version installed then you have to replace the 7.2 with 7.4 in the below command
 	
-	sudo apt install php7.2-common php7.2-mysql php7.2-xml php7.2-xmlrpc php7.2-curl php7.2-gd php7.2-imagick php7.2-cli php7.2-dev php7.2-imap php7.2-mbstring php7.2-opcache        php7.2-soap php7.2-zip php7.2-intl -y
+	sudo apt install php7.2-common php7.2-mysql php7.2-xml php7.2-xmlrpc php7.2-curl php7.2-gd php7.2-imagick php7.2-cli php7.2-dev php7.2-imap php7.2-mbstring php7.2-opcache php7.2-soap php7.2-zip php7.2-intl -y
 	
 	sudo systemctl restart apache2
 	
@@ -126,7 +126,7 @@ INSTALL LAMP STACK ON AWS - UBUNTU 18
 	
    This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 	
-   <?php
+   	<?php
 	   phpinfo();
 	?>
 
@@ -142,52 +142,50 @@ INSTALL LAMP STACK ON AWS - UBUNTU 18
 
    Step 1 — Installing phpMyAdmin
 
-   sudo apt update
-   sudo apt install phpmyadmin php-mbstring php-gettext
+   	sudo apt update
+	
+   	sudo apt install phpmyadmin php-mbstring php-gettext
 
    Warning: When the prompt appears, “apache2” is highlighted, but not selected. If you do not hit SPACE to select Apache, the installer will not move the necessary files during    installation. Hit SPACE, TAB, and then ENTER to select Apache.
 
-   sudo phpenmod mbstring
-   sudo systemctl restart apache2
+   	sudo phpenmod mbstring
+   	sudo systemctl restart apache2
+	
    `For Checking:` http://your_domain_or_IP/phpmyadmin
 
 ==================================================
 
 ### Enabling mod_rewrite on apache2
-   
-      sudo apt-get update
-      sudo a2enmod rewrite
-      sudo service apache2 restart
-
-      sudo nano /etc/apache2/sites-enabled/000-default.conf
+	
+	sudo apt-get update
+	sudo a2enmod rewrite
+	sudo service apache2 restart
+	
+	sudo nano /etc/apache2/sites-enabled/000-default.conf
    
    Inside that file, you will find the <VirtualHost *:80> block on line 1. Inside of that block, add the following block:
   
-         <Directory /var/www/html>
-             Options Indexes FollowSymLinks MultiViews
-             AllowOverride All
-             Order allow,deny
-             allow from all
-         </Directory>
-  
-         sudo service apache2 restart
-   
-   
+	 <Directory /var/www/html>
+	 	Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	 </Directory>
+	 
+	 sudo service apache2 restart
    
    Create a file on var/www/html location with the name .htaccess and run the below command
-   
-        sudo vi var/www/html/.htaccess
+
+	sudo vi var/www/html/.htaccess
    
    and paste the below code.
-   
-   
-   
-         RewriteEngine On
 
-         RewriteCond $1 !^(PHP/url\.php)
-         RewriteCond %{REQUEST_FILENAME} !-f
-         RewriteCond %{REQUEST_FILENAME} !-d
-         RewriteRule ^(.*)$ PHP/url.php?/$1 [L]
+	RewriteEngine On
+	
+	RewriteCond $1 !^(PHP/url\.php)
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ PHP/url.php?/$1 [L]
 
    --End Of SUDO CODE--
 
