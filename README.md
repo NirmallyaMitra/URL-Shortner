@@ -3,11 +3,11 @@
 A deployed version can be checked here: http://ec2-3-142-232-79.us-east-2.compute.amazonaws.com/
 
 ## User Story
-###Requirement #1
+Requirement 1
 There is the need to shorten long urs
 as now a day's urls unavailability.
 
-###User Story #1: 
+User Story 1: 
 As a Businessman I would like to have a Url Shortner Service
 so that I can Shorten the URL as my own.
 
