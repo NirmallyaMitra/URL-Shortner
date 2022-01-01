@@ -38,7 +38,7 @@ session_start();
       if($email_count){
           $email_pass = mysqli_fetch_assoc($query);
           $p = $email_pass['pwd'];
-          if($p){
+          if($p == $password){
             $_SESSION['username'] = $email_pass['Name'];
             header("location: PHP/url.php");
           }
