@@ -44,22 +44,22 @@
 	        			<div class="fields">
 	           			<form method="post" action="User.php">
 			  						<div class="name">
-											<input type="name" class="user-input" placeholder="Name" name="name"/>
+											<input type="name" class="user-input" placeholder="Name" name="name" required />
 											<i class="fad fa-user"></i>
 			  						</div>
 			  
 			  						<div class="phone">
-											<input type="phone" class="user-input" placeholder="Mobile Number" name = "phone"/>
+											<input type="phone" class="user-input" placeholder="Mobile Number" name = "phone" required />
 											<i class="far fa-phone-alt"></i>
 			  						</div>
 			 
 										<div class="mail">    
-			  							<input type="mail" class="user-input" placeholder="Email" name="mail"/>
+			  							<input type="mail" class="user-input" placeholder="Email" name="mail" required />
 			  							<i class="fad fa-envelope"></i>
 										</div>
 
 										<div class="password">
-			  							<input type="" class="pass-input" placeholder="Password" name="pwd"/>
+			  							<input type="" class="pass-input" placeholder="Password" name="pwd" required />
 			  							<i class="fad fa-lock"></i>
 										</div>
 										<input type="submit" value="Sign In" class="BUTTON">
