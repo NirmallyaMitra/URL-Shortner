@@ -37,9 +37,9 @@ session_start();
 
       if($email_count){
           $email_pass = mysqli_fetch_assoc($query);
-          $_SESSION['username'] = $email_pass['Name'];
           $p = $email_pass['pwd'];
           if($p){
+            $_SESSION['username'] = $email_pass['Name'];
             header("location: PHP/url.php");
           }
           else{
@@ -74,12 +74,12 @@ session_start();
               			<div class="fields">
                       <form method="post" action='<?php echo htmlentities($_SERVER['PHP_SELF']);?>'>
                 			<div class="mail">
-                  				<input type="mail" name="email" class="user-input" placeholder="Email" autocomplete="off"/>
+                  				<input type="mail" name="email" class="user-input" placeholder="Email" autocomplete="off" required/>
                   				<i class="fad fa-envelope"></i>
                 			</div>
 
                 			<div class="password">
-                  				<input id="password" type="password" name="password" class="pass-input" placeholder="Password" autocomplete="off"/>
+                  				<input id="password" type="password" name="password" class="pass-input" placeholder="Password" autocomplete="off" required/>
                   				<i class="fas fa-eye" id="togglePassword"></i>
                 			</div>
                 			<input type="submit" name="submit" value="Sign In" class="BUTTON">
