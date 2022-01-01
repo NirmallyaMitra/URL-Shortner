@@ -5,6 +5,14 @@ https://user-images.githubusercontent.com/76685103/147847157-a2aff4d5-21ea-4642-
 
 A deployed version can be checked here: http://ec2-3-142-232-79.us-east-2.compute.amazonaws.com/
 
+## Designs
+![1](https://user-images.githubusercontent.com/76685103/147847309-b81fa921-c5b9-4907-865a-baed2df58f4e.png)
+![2](https://user-images.githubusercontent.com/76685103/147847315-e4063d88-7055-476b-abc1-8209aadc31bd.png)
+![3](https://user-images.githubusercontent.com/76685103/147847316-832134a1-b1c2-4084-bbb5-91ee50534519.png)
+![4](https://user-images.githubusercontent.com/76685103/147847318-14606934-5386-4f1b-95a2-9fd2a8cda718.png)
+![5](https://user-images.githubusercontent.com/76685103/147847321-671c93fe-59fa-4e5c-a04e-b6c42ffb3101.png)
+![6](https://user-images.githubusercontent.com/76685103/147847326-2ffbb03c-9ce2-42a3-a1b9-4f66ab7e3968.png)
+
 ## User Story
 ### Requirement 1
 There is the need to shorten long urs
