@@ -23,7 +23,7 @@ shortenBtn.onclick = ()=>{
                 blurEffect.style.display = "block";
                 popupBox.classList.add("show");
 
-                let domain = "localhost/URL-Shortner/"; 
+                let domain = "3.142.232.79/"; 
                 shortenURL.value = domain + data;
                 copyIcon.onclick = ()=>{
                     shortenURL.select();

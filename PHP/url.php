@@ -73,12 +73,12 @@
           ?>
           <div class="data">
             <li>
-              <a href="http://localhost/URL-Shortner/<?php echo $row['shorten_url'] ?>">
+              <a href="http://3.142.232.79/<?php echo $row['shorten_url'] ?>">
               <?php
-                if(strlen("localhost/URL-Shortner/".$row['shorten_url']) > 50){
-                  echo "localhost/URL-Shortner/".substr($row['shorten_url'], 0, 50) . '...';
+                if(strlen("3.142.232.79/".$row['shorten_url']) > 50){
+                  echo "3.142.232.79/".substr($row['shorten_url'], 0, 50) . '...';
                 }else{
-                  echo "localhost/URL-Shortner/".$row['shorten_url'];
+                  echo "3.142.232.79/".$row['shorten_url'];
                 }
               ?>
               </a>

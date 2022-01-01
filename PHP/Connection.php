@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost";
   $username = "root";
-  $password = "";
-  $dbname = "UrlShortner";
+  $password = "Pravat@123";
+  $dbname = "urlshortner";
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
