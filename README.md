@@ -1,6 +1,6 @@
 # URL-Shortner
 
-A deployed version can be checked here: http://ec2-3-139-62-27.us-east-2.compute.amazonaws.com/
+A deployed version can be checked here: ec2-3-142-232-79.us-east-2.compute.amazonaws.com
 
 ## Developer
 1. Nirmallya Mitra [https://github.com/NirmallyaMitra]
